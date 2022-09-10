@@ -1,0 +1,1067 @@
+[
+    {
+        "id": "917fed556fb0884b",
+        "type": "tab",
+        "label": "Sensors",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "619197f60363aff6",
+        "type": "tab",
+        "label": "Write to file",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e0c5d8f231f3d963",
+        "type": "tab",
+        "label": "Valve control",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5107db51bd70d437",
+        "type": "group",
+        "z": "917fed556fb0884b",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "711bf3aeac33d268",
+            "b4d425412f28ae0c",
+            "54b565822f594126",
+            "f753fb3a195898d6",
+            "c82935349a40df41",
+            "5c3b92a157a30f6b",
+            "480b9b93102e8f38",
+            "b377711e3c07ccc1",
+            "8a42403c816c732f",
+            "263eda2b484530ee",
+            "5ed9c9aebeba2e50",
+            "60923f54abc8134f"
+        ],
+        "x": 514,
+        "y": 31.5,
+        "w": 512,
+        "h": 357
+    },
+    {
+        "id": "72468904c527aedb",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c9c42e789695859d",
+        "type": "ui_group",
+        "name": "Differential pressure sensor",
+        "tab": "cef086083e4f908a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "01d604885f72c210",
+        "type": "serial-port",
+        "serialport": "COM7",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "108ea51fa6af1a67",
+        "type": "ui_group",
+        "name": "Altimeter",
+        "tab": "cef086083e4f908a",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "17156eff85a114a4",
+        "type": "ui_group",
+        "name": "Actions",
+        "tab": "cef086083e4f908a",
+        "order": 1,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d23858d10d94ee89",
+        "type": "ui_group",
+        "name": "IMU",
+        "tab": "cef086083e4f908a",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cef086083e4f908a",
+        "type": "ui_tab",
+        "name": "CANDY dashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "711bf3aeac33d268",
+        "type": "ui_chart",
+        "z": "917fed556fb0884b",
+        "g": "5107db51bd70d437",
+        "name": "",
+        "group": "c9c42e789695859d",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "label": "temperature [oC]",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 870,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "52ddb79c6b289978",
+        "type": "json",
+        "z": "917fed556fb0884b",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "b4d425412f28ae0c",
+                "54b565822f594126",
+                "f753fb3a195898d6",
+                "5c3b92a157a30f6b",
+                "263eda2b484530ee",
+                "5ed9c9aebeba2e50",
+                "09bb156b7772f735"
+            ]
+        ]
+    },
+    {
+        "id": "4e25857880a3f4e2",
+        "type": "serial in",
+        "z": "917fed556fb0884b",
+        "name": "COM port",
+        "serial": "01d604885f72c210",
+        "x": 80,
+        "y": 100,
+        "wires": [
+            [
+                "22742616fb08d453",
+                "23d4d6b620594245"
+            ]
+        ]
+    },
+    {
+        "id": "b4d425412f28ae0c",
+        "type": "function",
+        "z": "917fed556fb0884b",
+        "g": "5107db51bd70d437",
+        "name": "chamber pressuee chart",
+        "func": "msg.topic = \"chamber pressure\";\nmsg.payload = Number(msg.payload.p0.toFixed(2));\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 140,
+        "wires": [
+            [
+                "480b9b93102e8f38"
+            ]
+        ]
+    },
+    {
+        "id": "54b565822f594126",
+        "type": "function",
+        "z": "917fed556fb0884b",
+        "g": "5107db51bd70d437",
+        "name": "absolute pressure chart",
+        "func": "var msg1 = {};\nvar msg2 = {};\n\nmsg1.topic = \"abs pressure BMP680\";\nmsg1.payload = Number(msg.payload.p1);\nmsg2.topic = \"abs pressure BMP390\";\nmsg2.payload = Number(msg.payload.p2);\n\nreturn [msg1, msg2]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 180,
+        "wires": [
+            [
+                "60923f54abc8134f"
+            ],
+            [
+                "60923f54abc8134f"
+            ]
+        ]
+    },
+    {
+        "id": "f753fb3a195898d6",
+        "type": "function",
+        "z": "917fed556fb0884b",
+        "g": "5107db51bd70d437",
+        "name": "ABS altitude chart",
+        "func": "var msg1 = {};\nvar msg2 = {};\n\nmsg1.topic = \"ABS altitude BME680\";\nmsg1.payload = Number(msg.payload.alt0);\nmsg2.topic = \"ABS altitude BMP390\";\nmsg2.payload = Number(msg.payload.alt1);\nreturn [msg1, msg2]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 220,
+        "wires": [
+            [
+                "c82935349a40df41"
+            ],
+            [
+                "c82935349a40df41"
+            ]
+        ]
+    },
+    {
+        "id": "c82935349a40df41",
+        "type": "ui_chart",
+        "z": "917fed556fb0884b",
+        "g": "5107db51bd70d437",
+        "name": "",
+        "group": "108ea51fa6af1a67",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "altitude [m]",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "120",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 850,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c3b92a157a30f6b",
+        "type": "function",
+        "z": "917fed556fb0884b",
+        "g": "5107db51bd70d437",
+        "name": "temperature chart",
+        "func": "var msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\n\nmsg1.topic = \"temperature - chamber\";\nmsg1.payload =  msg.payload.t0;\nmsg2.topic = \"temperature BME680\";\nmsg2.payload = msg.payload.t1;\nmsg3.topic = \"temperature BMP390\";\nmsg3.payload = msg.payload.t2;\n\nreturn [msg1, msg2, msg3];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 80,
+        "wires": [
+            [
+                "711bf3aeac33d268"
+            ],
+            [
+                "711bf3aeac33d268"
+            ],
+            [
+                "711bf3aeac33d268"
+            ]
+        ]
+    },
+    {
+        "id": "480b9b93102e8f38",
+        "type": "ui_gauge",
+        "z": "917fed556fb0884b",
+        "g": "5107db51bd70d437",
+        "name": "",
+        "group": "c9c42e789695859d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Chamber pressure",
+        "label": "mbar",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 870,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "b377711e3c07ccc1",
+        "type": "ui_chart",
+        "z": "917fed556fb0884b",
+        "g": "5107db51bd70d437",
+        "name": "",
+        "group": "d23858d10d94ee89",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Acceleration [m/s2]",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 870,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a42403c816c732f",
+        "type": "ui_chart",
+        "z": "917fed556fb0884b",
+        "g": "5107db51bd70d437",
+        "name": "",
+        "group": "d23858d10d94ee89",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Rotation [deg/s]",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 860,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "263eda2b484530ee",
+        "type": "function",
+        "z": "917fed556fb0884b",
+        "g": "5107db51bd70d437",
+        "name": "acceleration chart",
+        "func": "var msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\n\nmsg1.topic = \"accel X\";\nmsg1.payload =  msg.payload.ax;\nmsg2.topic = \"accel Y\";\nmsg2.payload = msg.payload.ay;\nmsg3.topic = \"accel Z\";\nmsg3.payload = msg.payload.az;\n\nreturn [msg1, msg2, msg3];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 280,
+        "wires": [
+            [
+                "b377711e3c07ccc1"
+            ],
+            [
+                "b377711e3c07ccc1"
+            ],
+            [
+                "b377711e3c07ccc1"
+            ]
+        ]
+    },
+    {
+        "id": "5ed9c9aebeba2e50",
+        "type": "function",
+        "z": "917fed556fb0884b",
+        "g": "5107db51bd70d437",
+        "name": "gyro chart",
+        "func": "var msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\n\nmsg1.topic = \"pitch\";\nmsg1.payload =  msg.payload.gx;\nmsg2.topic = \"roll\";\nmsg2.payload = msg.payload.gy;\nmsg3.topic = \"yaw\";\nmsg3.payload = msg.payload.gz;\n\nreturn [msg1, msg2, msg3];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 340,
+        "wires": [
+            [
+                "8a42403c816c732f"
+            ],
+            [
+                "8a42403c816c732f"
+            ],
+            [
+                "8a42403c816c732f"
+            ]
+        ]
+    },
+    {
+        "id": "22742616fb08d453",
+        "type": "debug",
+        "z": "917fed556fb0884b",
+        "name": "serial data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 270,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "23d4d6b620594245",
+        "type": "delay",
+        "z": "917fed556fb0884b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "10",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "52ddb79c6b289978"
+            ]
+        ]
+    },
+    {
+        "id": "60923f54abc8134f",
+        "type": "ui_chart",
+        "z": "917fed556fb0884b",
+        "g": "5107db51bd70d437",
+        "name": "",
+        "group": "108ea51fa6af1a67",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Absolute pressure [hPa]",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "120",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 890,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "09bb156b7772f735",
+        "type": "link out",
+        "z": "917fed556fb0884b",
+        "name": "incoming message",
+        "mode": "link",
+        "links": [
+            "e7692cd0709b126a"
+        ],
+        "x": 455,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "8313b5287f77e1f0",
+        "type": "csv",
+        "z": "619197f60363aff6",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "once",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 550,
+        "y": 240,
+        "wires": [
+            [
+                "64d4a614c0baf679"
+            ]
+        ]
+    },
+    {
+        "id": "654551b3235cb203",
+        "type": "file",
+        "z": "619197f60363aff6",
+        "name": "",
+        "filename": "/Users/tomaszkowalski/OneDrive/Home/IPPT/TANGO4/Software/Aerostat/measures/measurement_file.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "delete",
+        "encoding": "none",
+        "x": 710,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5709f373cedc758b",
+        "type": "ui_button",
+        "z": "619197f60363aff6",
+        "name": "",
+        "group": "17156eff85a114a4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Delete file",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 300,
+        "wires": [
+            [
+                "654551b3235cb203"
+            ]
+        ]
+    },
+    {
+        "id": "f5cf7be47a71a378",
+        "type": "function",
+        "z": "619197f60363aff6",
+        "name": "Format message",
+        "func": "var newMessage = {};\nlet time =  new Date();\nnewMessage.topic = \"sensor data\";\nmsg.payload.time = new Date();\nnewMessage.payload = {\n\"time\": time.toTimeString().toString().substring(0,8) + \".\" +time.getMilliseconds(),\n\"diff pressure [mbar]\": msg.payload.p0,\n\"chamber temp [oC]\" : msg.payload.t0,\n\"temperature BME680 [oC]\" : msg.payload.t1,\n\"temperature BMP390 [oC]\": msg.payload.t2,\n\"abs pressure BME680 [hPa]\" : msg.payload.p1,\n\"abs pressure BMP390 [hPa]\": msg.payload.p2,\n\"humidity [%]\" : msg.payload.hum,\n\"gas resistance [KOhms]\" : msg.payload.gas,\n\"altitude BME680 [m]\" : msg.payload.alt0,\n\"altitude BMP390 [m]\": msg.payload.alt1,\n\"accel X [m/s2]\" : msg.payload.ax,\n\"accel Y [m/s2]\" : msg.payload.ay,\n\"accel Z [m/s2]\" : msg.payload.az,\n\"gyro X [deg/s]\": msg.payload.gx,\n\"gyro Y [deg/s]\": msg.payload.gy,\n\"gyro Z [deg/s]\": msg.payload.gz\n}\nreturn newMessage;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "ef454f4066e1b76f"
+            ]
+        ]
+    },
+    {
+        "id": "3c399375e30bfbb7",
+        "type": "debug",
+        "z": "619197f60363aff6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 550,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ef454f4066e1b76f",
+        "type": "function",
+        "z": "619197f60363aff6",
+        "name": "gate",
+        "func": "var block = context.get(\"block\") || false;\n\n//if (msg.topic == \"_block_toggle\") {\nif (msg.topic == \"block\") {\n    block = !!msg.payload;\n    context.set(\"block\", block);\n    var stat = {\n        fill: block ? \"red\" : \"green\",\n        shape: block ? \"dot\": \"ring\",\n        text: block ? \"Blocked\" : \"Unblocked\"\n    }\n    node.status(stat)\n    //return null; //halt flow\n    return msg.reset;\n}\n\n//if(block) return null; //halt flow\nif(block) return msg.reset; \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 240,
+        "wires": [
+            [
+                "8313b5287f77e1f0",
+                "3c399375e30bfbb7"
+            ]
+        ]
+    },
+    {
+        "id": "d217a6eb9e7614a6",
+        "type": "ui_switch",
+        "z": "619197f60363aff6",
+        "name": "write to file",
+        "label": "write to file",
+        "tooltip": "",
+        "group": "17156eff85a114a4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "false",
+        "topic": "block",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "false",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "true",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 250,
+        "y": 240,
+        "wires": [
+            [
+                "ef454f4066e1b76f"
+            ]
+        ]
+    },
+    {
+        "id": "9bdce28a926121cf",
+        "type": "inject",
+        "z": "619197f60363aff6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "reset",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "block",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 80,
+        "y": 240,
+        "wires": [
+            [
+                "d217a6eb9e7614a6"
+            ]
+        ]
+    },
+    {
+        "id": "64d4a614c0baf679",
+        "type": "file",
+        "z": "619197f60363aff6",
+        "name": "",
+        "filename": "/Users/tomaszkowalski/OneDrive/Home/IPPT/TANGO4/Software/Aerostat/measures/measurement_file.csv",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 990,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e7692cd0709b126a",
+        "type": "link in",
+        "z": "619197f60363aff6",
+        "name": "link in 1",
+        "links": [
+            "09bb156b7772f735"
+        ],
+        "x": 75,
+        "y": 180,
+        "wires": [
+            [
+                "f5cf7be47a71a378"
+            ]
+        ]
+    },
+    {
+        "id": "e44c3dc25c94bd04",
+        "type": "inject",
+        "z": "619197f60363aff6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "sensor data",
+        "payload": "{\"sensor\" : 0.1}",
+        "payloadType": "json",
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "ef454f4066e1b76f"
+            ]
+        ]
+    },
+    {
+        "id": "cda6c7094272cf64",
+        "type": "serial out",
+        "z": "e0c5d8f231f3d963",
+        "name": "",
+        "serial": "01d604885f72c210",
+        "x": 610,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6850acb8fc115b8b",
+        "type": "json",
+        "z": "e0c5d8f231f3d963",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 200,
+        "wires": [
+            [
+                "cda6c7094272cf64",
+                "f47fb22efc3adc90"
+            ]
+        ]
+    },
+    {
+        "id": "4945ccf937785640",
+        "type": "function",
+        "z": "e0c5d8f231f3d963",
+        "name": "Format message",
+        "func": "var newMessage = {};\nnewMessage.topic = \"valve\";\nnewMessage.payload = msg.payload;\nreturn newMessage;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "6850acb8fc115b8b"
+            ]
+        ]
+    },
+    {
+        "id": "f47fb22efc3adc90",
+        "type": "debug",
+        "z": "e0c5d8f231f3d963",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "11985734c58bd817",
+        "type": "ui_switch",
+        "z": "e0c5d8f231f3d963",
+        "name": "valve control",
+        "label": "open valve",
+        "tooltip": "",
+        "group": "17156eff85a114a4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "valve",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "false",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "true",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "4945ccf937785640"
+            ]
+        ]
+    }
+]
