@@ -21,6 +21,7 @@ int accl_range, gyro_range;
 const int capacity_out = JSON_OBJECT_SIZE(16);
 // create json object for storing input data
 const int capacity_in = JSON_OBJECT_SIZE(2);
+DynamicJsonDocument<>
 StaticJsonDocument<capacity_out> sensorData;
 StaticJsonDocument<capacity_in> inputData;
 
@@ -40,7 +41,7 @@ void setup()
   LoRa.setSignalBandwidth(250E3);
   // start serial comunication
   //Serial.begin(115200);
-  //while (!Serial);
+  //while(!Serial);
 
   // confugure gauge pressure sensor
   SPI.begin();                     // start SPI communication
@@ -51,7 +52,7 @@ void setup()
     LoRa.beginPacket();
     LoRa.println("Could not find a valid BMP390 sensor, check wiring!");
     LoRa.endPacket();
-    while(1);
+    while(true);
   }
   // Set up oversampling and filter initialization
   bmp.setTemperatureOversampling(BMP3_OVERSAMPLING_8X);
@@ -65,7 +66,7 @@ void setup()
     LoRa.beginPacket();
     LoRa.println(F("Could not find a valid BME688 sensor, check wiring!"));
     LoRa.endPacket();
-    while (1);
+    while(true);
   }
 
   // Set up oversampling and filter initialization for BME688
@@ -139,10 +140,10 @@ void loop()
   }
   
   // read and append data from BME680
-  sensorData["t1"] = round2(bme.temperature);                         // [oC]
-  sensorData["p1"] = round2(bme.pressure / 100.0);                    // [hPa]
-  sensorData["hum"] = round2(bme.humidity);                           // [%]
-  sensorData["gas"] = round2(bme.gas_resistance / 1000.0);            // [KOhms]
+  sensorData["t1"] = round2(bme.temperature);                          // [oC]
+  sensorData["p1"] = round2(bme.pressure / 100.0);                     // [hPa]
+  sensorData["hum"] = round2(bme.humidity);                            // [%]
+  sensorData["gas"] = round2(bme.gas_resistance / 1000.0);             // [KOhms]
   sensorData["alt0"] = round2(bme.readAltitude(SEALEVELPRESSURE_HPA)); // [m]
 
   // try read data from BMP390
@@ -170,14 +171,11 @@ void loop()
   LoRa.print("\n");
   LoRa.endPacket();
 
-  //serializeJson(sensorData, Serial);
-  //Serial.print("\n");
-
   // wait for respone and read message
   //deserializeJson(message_in, LoRa.);
   //bool valve_control = message_in["valve"];
   //gas_reliese_valve.write(set_valce_position(valve_control));
 
   // wait for next iter
-  delay(50);
+  delay(500);
 }

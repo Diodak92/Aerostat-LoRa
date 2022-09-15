@@ -8,7 +8,7 @@
         "env": []
     },
     {
-        "id": "619197f60363aff6",
+        "id": "5aeea8caac0c5431",
         "type": "tab",
         "label": "Write to file",
         "disabled": false,
@@ -24,7 +24,7 @@
         "env": []
     },
     {
-        "id": "5107db51bd70d437",
+        "id": "a1dc02c61506a93f",
         "type": "group",
         "z": "917fed556fb0884b",
         "style": {
@@ -50,10 +50,28 @@
             "5ed9c9aebeba2e50",
             "60923f54abc8134f"
         ],
-        "x": 514,
-        "y": 31.5,
+        "x": 674,
+        "y": 11.5,
         "w": 512,
         "h": 357
+    },
+    {
+        "id": "f9e8c5dc9b166144",
+        "type": "group",
+        "z": "917fed556fb0884b",
+        "name": "",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "fc8137cefca4bfe7",
+            "277b4392bc5a09cb",
+            "1ec71130897f3824"
+        ],
+        "x": 674,
+        "y": 379,
+        "w": 432,
+        "h": 122
     },
     {
         "id": "72468904c527aedb",
@@ -136,7 +154,7 @@
         },
         "site": {
             "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
+            "hideToolbar": "true",
             "allowSwipe": "false",
             "lockMenu": "false",
             "allowTempTheme": "true",
@@ -158,7 +176,7 @@
         "type": "ui_group",
         "name": "Differential pressure sensor",
         "tab": "cef086083e4f908a",
-        "order": 2,
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -167,7 +185,7 @@
     {
         "id": "01d604885f72c210",
         "type": "serial-port",
-        "serialport": "COM7",
+        "serialport": "COM8",
         "serialbaud": "115200",
         "databits": "8",
         "parity": "none",
@@ -188,7 +206,7 @@
         "type": "ui_group",
         "name": "Altimeter",
         "tab": "cef086083e4f908a",
-        "order": 3,
+        "order": 4,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -197,7 +215,7 @@
     {
         "id": "17156eff85a114a4",
         "type": "ui_group",
-        "name": "Actions",
+        "name": "Main",
         "tab": "cef086083e4f908a",
         "order": 1,
         "disp": true,
@@ -210,7 +228,7 @@
         "type": "ui_group",
         "name": "IMU",
         "tab": "cef086083e4f908a",
-        "order": 4,
+        "order": 5,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -225,13 +243,83 @@
         "hidden": false
     },
     {
+        "id": "1ae7e0d061581c5f",
+        "type": "ui_spacer",
+        "z": "917fed556fb0884b",
+        "name": "spacer",
+        "group": "17156eff85a114a4",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2aa39a77a4bfc10e",
+        "type": "ui_spacer",
+        "z": "917fed556fb0884b",
+        "name": "spacer",
+        "group": "c9c42e789695859d",
+        "order": 2,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "05509e4853d73d08",
+        "type": "ui_spacer",
+        "z": "917fed556fb0884b",
+        "name": "spacer",
+        "group": "108ea51fa6af1a67",
+        "order": 2,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "c7cc42985834dd10",
+        "type": "ui_spacer",
+        "z": "917fed556fb0884b",
+        "name": "spacer",
+        "group": "d23858d10d94ee89",
+        "order": 2,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "0dc673fdbe66b45a",
+        "type": "ui_spacer",
+        "z": "917fed556fb0884b",
+        "name": "spacer",
+        "group": "c9c42e789695859d",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "34b4437456e0465b",
+        "type": "ui_spacer",
+        "z": "917fed556fb0884b",
+        "name": "spacer",
+        "group": "108ea51fa6af1a67",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "64d63b0ddd045f1e",
+        "type": "ui_spacer",
+        "z": "917fed556fb0884b",
+        "name": "spacer",
+        "group": "d23858d10d94ee89",
+        "order": 4,
+        "width": "1",
+        "height": "1"
+    },
+    {
         "id": "711bf3aeac33d268",
         "type": "ui_chart",
         "z": "917fed556fb0884b",
-        "g": "5107db51bd70d437",
+        "g": "a1dc02c61506a93f",
         "name": "",
         "group": "c9c42e789695859d",
-        "order": 2,
+        "order": 3,
         "width": "0",
         "height": "0",
         "label": "temperature [oC]",
@@ -263,8 +351,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 870,
-        "y": 80,
+        "x": 1030,
+        "y": 60,
         "wires": [
             []
         ]
@@ -277,17 +365,11 @@
         "property": "payload",
         "action": "",
         "pretty": true,
-        "x": 410,
-        "y": 100,
+        "x": 210,
+        "y": 200,
         "wires": [
             [
-                "b4d425412f28ae0c",
-                "54b565822f594126",
-                "f753fb3a195898d6",
-                "5c3b92a157a30f6b",
-                "263eda2b484530ee",
-                "5ed9c9aebeba2e50",
-                "09bb156b7772f735"
+                "c8ba53482cb62e2c"
             ]
         ]
     },
@@ -298,11 +380,10 @@
         "name": "COM port",
         "serial": "01d604885f72c210",
         "x": 80,
-        "y": 100,
+        "y": 200,
         "wires": [
             [
-                "22742616fb08d453",
-                "23d4d6b620594245"
+                "52ddb79c6b289978"
             ]
         ]
     },
@@ -310,7 +391,7 @@
         "id": "b4d425412f28ae0c",
         "type": "function",
         "z": "917fed556fb0884b",
-        "g": "5107db51bd70d437",
+        "g": "a1dc02c61506a93f",
         "name": "chamber pressuee chart",
         "func": "msg.topic = \"chamber pressure\";\nmsg.payload = Number(msg.payload.p0.toFixed(2));\nreturn msg",
         "outputs": 1,
@@ -318,8 +399,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 140,
+        "x": 810,
+        "y": 120,
         "wires": [
             [
                 "480b9b93102e8f38"
@@ -330,7 +411,7 @@
         "id": "54b565822f594126",
         "type": "function",
         "z": "917fed556fb0884b",
-        "g": "5107db51bd70d437",
+        "g": "a1dc02c61506a93f",
         "name": "absolute pressure chart",
         "func": "var msg1 = {};\nvar msg2 = {};\n\nmsg1.topic = \"abs pressure BMP680\";\nmsg1.payload = Number(msg.payload.p1);\nmsg2.topic = \"abs pressure BMP390\";\nmsg2.payload = Number(msg.payload.p2);\n\nreturn [msg1, msg2]",
         "outputs": 2,
@@ -338,8 +419,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 180,
+        "x": 810,
+        "y": 160,
         "wires": [
             [
                 "60923f54abc8134f"
@@ -353,7 +434,7 @@
         "id": "f753fb3a195898d6",
         "type": "function",
         "z": "917fed556fb0884b",
-        "g": "5107db51bd70d437",
+        "g": "a1dc02c61506a93f",
         "name": "ABS altitude chart",
         "func": "var msg1 = {};\nvar msg2 = {};\n\nmsg1.topic = \"ABS altitude BME680\";\nmsg1.payload = Number(msg.payload.alt0);\nmsg2.topic = \"ABS altitude BMP390\";\nmsg2.payload = Number(msg.payload.alt1);\nreturn [msg1, msg2]",
         "outputs": 2,
@@ -361,8 +442,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
-        "y": 220,
+        "x": 790,
+        "y": 200,
         "wires": [
             [
                 "c82935349a40df41"
@@ -376,7 +457,7 @@
         "id": "c82935349a40df41",
         "type": "ui_chart",
         "z": "917fed556fb0884b",
-        "g": "5107db51bd70d437",
+        "g": "a1dc02c61506a93f",
         "name": "",
         "group": "108ea51fa6af1a67",
         "order": 1,
@@ -411,8 +492,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 850,
-        "y": 220,
+        "x": 1010,
+        "y": 200,
         "wires": [
             []
         ]
@@ -421,7 +502,7 @@
         "id": "5c3b92a157a30f6b",
         "type": "function",
         "z": "917fed556fb0884b",
-        "g": "5107db51bd70d437",
+        "g": "a1dc02c61506a93f",
         "name": "temperature chart",
         "func": "var msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\n\nmsg1.topic = \"temperature - chamber\";\nmsg1.payload =  msg.payload.t0;\nmsg2.topic = \"temperature BME680\";\nmsg2.payload = msg.payload.t1;\nmsg3.topic = \"temperature BMP390\";\nmsg3.payload = msg.payload.t2;\n\nreturn [msg1, msg2, msg3];",
         "outputs": 3,
@@ -429,8 +510,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
-        "y": 80,
+        "x": 790,
+        "y": 60,
         "wires": [
             [
                 "711bf3aeac33d268"
@@ -447,7 +528,7 @@
         "id": "480b9b93102e8f38",
         "type": "ui_gauge",
         "z": "917fed556fb0884b",
-        "g": "5107db51bd70d437",
+        "g": "a1dc02c61506a93f",
         "name": "",
         "group": "c9c42e789695859d",
         "order": 1,
@@ -467,18 +548,18 @@
         "seg1": "",
         "seg2": "",
         "className": "",
-        "x": 870,
-        "y": 140,
+        "x": 1030,
+        "y": 120,
         "wires": []
     },
     {
         "id": "b377711e3c07ccc1",
         "type": "ui_chart",
         "z": "917fed556fb0884b",
-        "g": "5107db51bd70d437",
+        "g": "a1dc02c61506a93f",
         "name": "",
         "group": "d23858d10d94ee89",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
         "label": "Acceleration [m/s2]",
@@ -510,8 +591,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 870,
-        "y": 280,
+        "x": 1030,
+        "y": 260,
         "wires": [
             []
         ]
@@ -520,10 +601,10 @@
         "id": "8a42403c816c732f",
         "type": "ui_chart",
         "z": "917fed556fb0884b",
-        "g": "5107db51bd70d437",
+        "g": "a1dc02c61506a93f",
         "name": "",
         "group": "d23858d10d94ee89",
-        "order": 0,
+        "order": 3,
         "width": 0,
         "height": 0,
         "label": "Rotation [deg/s]",
@@ -555,8 +636,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 860,
-        "y": 340,
+        "x": 1020,
+        "y": 320,
         "wires": [
             []
         ]
@@ -565,7 +646,7 @@
         "id": "263eda2b484530ee",
         "type": "function",
         "z": "917fed556fb0884b",
-        "g": "5107db51bd70d437",
+        "g": "a1dc02c61506a93f",
         "name": "acceleration chart",
         "func": "var msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\n\nmsg1.topic = \"accel X\";\nmsg1.payload =  msg.payload.ax;\nmsg2.topic = \"accel Y\";\nmsg2.payload = msg.payload.ay;\nmsg3.topic = \"accel Z\";\nmsg3.payload = msg.payload.az;\n\nreturn [msg1, msg2, msg3];",
         "outputs": 3,
@@ -573,8 +654,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
-        "y": 280,
+        "x": 790,
+        "y": 260,
         "wires": [
             [
                 "b377711e3c07ccc1"
@@ -591,7 +672,7 @@
         "id": "5ed9c9aebeba2e50",
         "type": "function",
         "z": "917fed556fb0884b",
-        "g": "5107db51bd70d437",
+        "g": "a1dc02c61506a93f",
         "name": "gyro chart",
         "func": "var msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\n\nmsg1.topic = \"pitch\";\nmsg1.payload =  msg.payload.gx;\nmsg2.topic = \"roll\";\nmsg2.payload = msg.payload.gy;\nmsg3.topic = \"yaw\";\nmsg3.payload = msg.payload.gz;\n\nreturn [msg1, msg2, msg3];",
         "outputs": 3,
@@ -599,8 +680,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 340,
+        "x": 760,
+        "y": 320,
         "wires": [
             [
                 "8a42403c816c732f"
@@ -622,12 +703,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 270,
-        "y": 160,
+        "x": 470,
+        "y": 380,
         "wires": []
     },
     {
@@ -647,11 +728,17 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 260,
-        "y": 100,
+        "x": 500,
+        "y": 160,
         "wires": [
             [
-                "52ddb79c6b289978"
+                "5c3b92a157a30f6b",
+                "b4d425412f28ae0c",
+                "8b65c59c76e5af01",
+                "54b565822f594126",
+                "f753fb3a195898d6",
+                "263eda2b484530ee",
+                "5ed9c9aebeba2e50"
             ]
         ]
     },
@@ -659,10 +746,10 @@
         "id": "60923f54abc8134f",
         "type": "ui_chart",
         "z": "917fed556fb0884b",
-        "g": "5107db51bd70d437",
+        "g": "a1dc02c61506a93f",
         "name": "",
         "group": "108ea51fa6af1a67",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "label": "Absolute pressure [hPa]",
@@ -694,29 +781,140 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 890,
-        "y": 180,
+        "x": 1050,
+        "y": 160,
         "wires": [
             []
         ]
     },
     {
-        "id": "09bb156b7772f735",
+        "id": "8b65c59c76e5af01",
         "type": "link out",
         "z": "917fed556fb0884b",
-        "name": "incoming message",
+        "name": "link out 1",
         "mode": "link",
-        "links": [
-            "e7692cd0709b126a"
-        ],
-        "x": 455,
-        "y": 220,
+        "links": [],
+        "x": 635,
+        "y": 40,
         "wires": []
     },
     {
-        "id": "8313b5287f77e1f0",
+        "id": "c8ba53482cb62e2c",
+        "type": "switch",
+        "z": "917fed556fb0884b",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "t0",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "rssi",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "23d4d6b620594245"
+            ],
+            [
+                "277b4392bc5a09cb",
+                "22742616fb08d453"
+            ]
+        ]
+    },
+    {
+        "id": "fc8137cefca4bfe7",
+        "type": "ui_gauge",
+        "z": "917fed556fb0884b",
+        "g": "f9e8c5dc9b166144",
+        "name": "",
+        "group": "17156eff85a114a4",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "LoRa RSSI",
+        "label": "dBm",
+        "format": "{{value}}",
+        "min": "-120",
+        "max": "-30",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1010,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "277b4392bc5a09cb",
+        "type": "function",
+        "z": "917fed556fb0884b",
+        "g": "f9e8c5dc9b166144",
+        "name": "Signal charts",
+        "func": "var msg1 = {};\nvar msg2 = {};\n\nmsg1.topic = \"RSSI\";\nmsg1.payload = msg.payload.rssi;\nmsg2.topic = \"SNR\";\nmsg2.payload = msg.payload.snr;\n\nreturn [msg1, msg2]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 440,
+        "wires": [
+            [
+                "fc8137cefca4bfe7"
+            ],
+            [
+                "1ec71130897f3824"
+            ]
+        ]
+    },
+    {
+        "id": "1ec71130897f3824",
+        "type": "ui_gauge",
+        "z": "917fed556fb0884b",
+        "g": "f9e8c5dc9b166144",
+        "name": "",
+        "group": "17156eff85a114a4",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "LoRa SNR",
+        "label": "dB",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "10",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1010,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4d04e1051c9d91a8",
         "type": "csv",
-        "z": "619197f60363aff6",
+        "z": "5aeea8caac0c5431",
         "name": "",
         "sep": ",",
         "hdrin": true,
@@ -728,38 +926,38 @@
         "strings": true,
         "include_empty_strings": "",
         "include_null_values": "",
-        "x": 550,
-        "y": 240,
+        "x": 530,
+        "y": 160,
         "wires": [
             [
-                "64d4a614c0baf679"
+                "870aed1bdc88a21e"
             ]
         ]
     },
     {
-        "id": "654551b3235cb203",
+        "id": "8da080129527df23",
         "type": "file",
-        "z": "619197f60363aff6",
+        "z": "5aeea8caac0c5431",
         "name": "",
-        "filename": "/Users/tomaszkowalski/OneDrive/Home/IPPT/TANGO4/Software/Aerostat/measures/measurement_file.csv",
+        "filename": "C:\\Users\\Tomasz\\OneDrive\\Home\\IPPT\\TANGO4\\Software\\Aerostat\\measures\\aerostat.csv",
         "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "delete",
         "encoding": "none",
-        "x": 710,
-        "y": 300,
+        "x": 660,
+        "y": 220,
         "wires": [
             []
         ]
     },
     {
-        "id": "5709f373cedc758b",
+        "id": "36757542fcbf4fbf",
         "type": "ui_button",
-        "z": "619197f60363aff6",
+        "z": "5aeea8caac0c5431",
         "name": "",
         "group": "17156eff85a114a4",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -774,73 +972,73 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 240,
-        "y": 300,
+        "y": 220,
         "wires": [
             [
-                "654551b3235cb203"
+                "8da080129527df23"
             ]
         ]
     },
     {
-        "id": "f5cf7be47a71a378",
+        "id": "ea0b6a53ab7b2821",
         "type": "function",
-        "z": "619197f60363aff6",
+        "z": "5aeea8caac0c5431",
         "name": "Format message",
-        "func": "var newMessage = {};\nlet time =  new Date();\nnewMessage.topic = \"sensor data\";\nmsg.payload.time = new Date();\nnewMessage.payload = {\n\"time\": time.toTimeString().toString().substring(0,8) + \".\" +time.getMilliseconds(),\n\"diff pressure [mbar]\": msg.payload.p0,\n\"chamber temp [oC]\" : msg.payload.t0,\n\"temperature BME680 [oC]\" : msg.payload.t1,\n\"temperature BMP390 [oC]\": msg.payload.t2,\n\"abs pressure BME680 [hPa]\" : msg.payload.p1,\n\"abs pressure BMP390 [hPa]\": msg.payload.p2,\n\"humidity [%]\" : msg.payload.hum,\n\"gas resistance [KOhms]\" : msg.payload.gas,\n\"altitude BME680 [m]\" : msg.payload.alt0,\n\"altitude BMP390 [m]\": msg.payload.alt1,\n\"accel X [m/s2]\" : msg.payload.ax,\n\"accel Y [m/s2]\" : msg.payload.ay,\n\"accel Z [m/s2]\" : msg.payload.az,\n\"gyro X [deg/s]\": msg.payload.gx,\n\"gyro Y [deg/s]\": msg.payload.gy,\n\"gyro Z [deg/s]\": msg.payload.gz\n}\nreturn newMessage;",
+        "func": "var newMessage = {};\nlet time =  new Date();\nnewMessage.topic = \"sensor data\";\nmsg.payload.time = new Date;\nnewMessage.payload = {\n\"time\": time.toTimeString().toString().substring(0,8) + \".\" +time.getMilliseconds(),\n\"diff pressure [mbar]\": msg.payload.p0,\n\"chamber temp [oC]\" : msg.payload.t0,\n\"temperature BME680 [oC]\" : msg.payload.t1,\n\"temperature BMP390 [oC]\": msg.payload.t2,\n\"abs pressure BME680 [hPa]\" : msg.payload.p1,\n\"abs pressure BMP390 [hPa]\": msg.payload.p2,\n\"humidity [%]\" : msg.payload.hum,\n\"gas resistance [KOhms]\" : msg.payload.gas,\n\"altitude BME680 [m]\" : msg.payload.alt0,\n\"altitude BMP390 [m]\": msg.payload.alt1,\n\"accel X [m/s2]\" : msg.payload.ax,\n\"accel Y [m/s2]\" : msg.payload.ay,\n\"accel Z [m/s2]\" : msg.payload.az,\n\"gyro X [deg/s]\": msg.payload.gx,\n\"gyro Y [deg/s]\": msg.payload.gy,\n\"gyro Z [deg/s]\": msg.payload.gz\n}\nreturn newMessage;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 210,
-        "y": 180,
+        "x": 190,
+        "y": 100,
         "wires": [
             [
-                "ef454f4066e1b76f"
+                "1aa5dfe456337ff6"
             ]
         ]
     },
     {
-        "id": "3c399375e30bfbb7",
+        "id": "abe1229a5348e31c",
         "type": "debug",
-        "z": "619197f60363aff6",
+        "z": "5aeea8caac0c5431",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
         "x": 550,
-        "y": 180,
+        "y": 100,
         "wires": []
     },
     {
-        "id": "ef454f4066e1b76f",
+        "id": "1aa5dfe456337ff6",
         "type": "function",
-        "z": "619197f60363aff6",
+        "z": "5aeea8caac0c5431",
         "name": "gate",
-        "func": "var block = context.get(\"block\") || false;\n\n//if (msg.topic == \"_block_toggle\") {\nif (msg.topic == \"block\") {\n    block = !!msg.payload;\n    context.set(\"block\", block);\n    var stat = {\n        fill: block ? \"red\" : \"green\",\n        shape: block ? \"dot\": \"ring\",\n        text: block ? \"Blocked\" : \"Unblocked\"\n    }\n    node.status(stat)\n    //return null; //halt flow\n    return msg.reset;\n}\n\n//if(block) return null; //halt flow\nif(block) return msg.reset; \n\nreturn msg;",
+        "func": "var block = context.get(\"block\") || false;\n\n//if (msg.topic == \"_block_toggle\") {\nif (msg.topic == \"block\") {\n    block = !!msg.payload;\n    context.set(\"block\", block);\n    var stat = {\n        fill: block ? \"red\" : \"green\",\n        shape: block ? \"dot\": \"ring\",\n        text: block ? \"Blocked\" : \"Unblocked\"\n    }\n    node.status(stat)\n    return null; //halt flow\n}\n\nif(block) return null; //halt flow\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 240,
+        "x": 390,
+        "y": 160,
         "wires": [
             [
-                "8313b5287f77e1f0",
-                "3c399375e30bfbb7"
+                "4d04e1051c9d91a8",
+                "abe1229a5348e31c"
             ]
         ]
     },
     {
-        "id": "d217a6eb9e7614a6",
+        "id": "f8e567442a92fe21",
         "type": "ui_switch",
-        "z": "619197f60363aff6",
+        "z": "5aeea8caac0c5431",
         "name": "write to file",
         "label": "write to file",
         "tooltip": "",
@@ -863,18 +1061,18 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 250,
-        "y": 240,
+        "x": 230,
+        "y": 160,
         "wires": [
             [
-                "ef454f4066e1b76f"
+                "1aa5dfe456337ff6"
             ]
         ]
     },
     {
-        "id": "9bdce28a926121cf",
+        "id": "0204ee237061126f",
         "type": "inject",
-        "z": "619197f60363aff6",
+        "z": "5aeea8caac0c5431",
         "name": "",
         "props": [
             {
@@ -882,11 +1080,6 @@
             },
             {
                 "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "reset",
-                "v": "",
                 "vt": "str"
             }
         ],
@@ -895,76 +1088,45 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "block",
-        "payload": "false",
+        "payload": "true",
         "payloadType": "bool",
         "x": 80,
-        "y": 240,
+        "y": 160,
         "wires": [
             [
-                "d217a6eb9e7614a6"
+                "f8e567442a92fe21"
             ]
         ]
     },
     {
-        "id": "64d4a614c0baf679",
+        "id": "ee7dd12893df56b6",
+        "type": "link in",
+        "z": "5aeea8caac0c5431",
+        "name": "link in 2",
+        "links": [],
+        "x": 55,
+        "y": 100,
+        "wires": [
+            [
+                "ea0b6a53ab7b2821"
+            ]
+        ]
+    },
+    {
+        "id": "870aed1bdc88a21e",
         "type": "file",
-        "z": "619197f60363aff6",
+        "z": "5aeea8caac0c5431",
         "name": "",
-        "filename": "/Users/tomaszkowalski/OneDrive/Home/IPPT/TANGO4/Software/Aerostat/measures/measurement_file.csv",
+        "filename": "C:\\Users\\Tomasz\\OneDrive\\Home\\IPPT\\TANGO4\\Software\\Aerostat\\measures\\aerostat.csv",
         "filenameType": "str",
         "appendNewline": false,
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 990,
-        "y": 240,
+        "x": 920,
+        "y": 160,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "e7692cd0709b126a",
-        "type": "link in",
-        "z": "619197f60363aff6",
-        "name": "link in 1",
-        "links": [
-            "09bb156b7772f735"
-        ],
-        "x": 75,
-        "y": 180,
-        "wires": [
-            [
-                "f5cf7be47a71a378"
-            ]
-        ]
-    },
-    {
-        "id": "e44c3dc25c94bd04",
-        "type": "inject",
-        "z": "619197f60363aff6",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "sensor data",
-        "payload": "{\"sensor\" : 0.1}",
-        "payloadType": "json",
-        "x": 200,
-        "y": 100,
-        "wires": [
-            [
-                "ef454f4066e1b76f"
-            ]
         ]
     },
     {
@@ -1034,11 +1196,12 @@
         "id": "11985734c58bd817",
         "type": "ui_switch",
         "z": "e0c5d8f231f3d963",
+        "d": true,
         "name": "valve control",
         "label": "open valve",
         "tooltip": "",
         "group": "17156eff85a114a4",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
