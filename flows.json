@@ -379,11 +379,12 @@
         "z": "917fed556fb0884b",
         "name": "COM port",
         "serial": "01d604885f72c210",
-        "x": 80,
+        "x": 60,
         "y": 200,
         "wires": [
             [
-                "52ddb79c6b289978"
+                "52ddb79c6b289978",
+                "22742616fb08d453"
             ]
         ]
     },
@@ -699,7 +700,7 @@
         "type": "debug",
         "z": "917fed556fb0884b",
         "name": "serial data",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -707,8 +708,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 470,
-        "y": 380,
+        "x": 210,
+        "y": 260,
         "wires": []
     },
     {
@@ -827,8 +828,7 @@
                 "23d4d6b620594245"
             ],
             [
-                "277b4392bc5a09cb",
-                "22742616fb08d453"
+                "277b4392bc5a09cb"
             ]
         ]
     },

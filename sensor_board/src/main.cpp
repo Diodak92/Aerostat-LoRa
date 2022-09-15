@@ -20,8 +20,7 @@ int accl_range, gyro_range;
 // create json object for storing sensor data
 const int capacity_out = JSON_OBJECT_SIZE(16);
 // create json object for storing input data
-const int capacity_in = JSON_OBJECT_SIZE(2);
-DynamicJsonDocument<>
+const int capacity_in = JSON_OBJECT_SIZE(1);
 StaticJsonDocument<capacity_out> sensorData;
 StaticJsonDocument<capacity_in> inputData;
 
@@ -39,6 +38,11 @@ void setup()
   LoRa.begin(868E6); // start LoRa module
   LoRa.setSpreadingFactor(7);
   LoRa.setSignalBandwidth(250E3);
+  // radio interrupt functions
+  LoRa.onReceive(onReceive);
+  LoRa.onTxDone(onTxDone);
+  LoRa_rxMode(); // put radio in recieve mode
+
   // start serial comunication
   //Serial.begin(115200);
   //while(!Serial);
@@ -49,9 +53,7 @@ void setup()
 
   // start BMP390 comunication
   if (!bmp.begin_I2C(0X77)) {  // hardware I2C mode, can pass in address & alt Wire
-    LoRa.beginPacket();
-    LoRa.println("Could not find a valid BMP390 sensor, check wiring!");
-    LoRa.endPacket();
+    LoRa_sendMessage("Could not find a valid BMP390 sensor, check wiring!");
     while(true);
   }
   // Set up oversampling and filter initialization
@@ -63,9 +65,7 @@ void setup()
   // start BME688 comunication
   if (!bme.begin(0x76))
   {
-    LoRa.beginPacket();
-    LoRa.println(F("Could not find a valid BME688 sensor, check wiring!"));
-    LoRa.endPacket();
+    LoRa_sendMessage("Could not find a valid BME688 sensor, check wiring!");
     while(true);
   }
 
@@ -121,9 +121,7 @@ void loop()
   // Tell BME680 to begin measurement
   unsigned long endTime = bme.beginReading();
   if (endTime == 0) {
-    LoRa.beginPacket();
-    LoRa.println(F("Failed to begin reading!"));
-    LoRa.endPacket();
+    LoRa_sendMessage("Failed to begin reading!");
     return;
   }
 
@@ -133,9 +131,7 @@ void loop()
   // Obtain measurement results from BME680. Note that this operation isn't
   // instantaneous even if milli() >= endTime due to I2C/SPI latency.
   if (!bme.endReading()){
-    LoRa.beginPacket();
-    LoRa.println(F("Failed to complete reading!"));
-    LoRa.endPacket();
+    LoRa_sendMessage("Failed to complete reading!");
     return;
   }
   
@@ -148,9 +144,7 @@ void loop()
 
   // try read data from BMP390
   if (! bmp.performReading()) {
-    LoRa.beginPacket();
-    LoRa.println("Failed to perform reading!");
-    LoRa.endPacket();
+    LoRa_sendMessage("Failed to perform reading!");
     return;
   }
 
@@ -165,17 +159,14 @@ void loop()
   // sensorData["bat"] = read_battery_voltage(ADC_BATTERY);
 
   // Send data over LoRa network
-  LoRa.beginPacket();
-  // Serialize data to JSON
-  serializeJson(sensorData, LoRa);
-  LoRa.print("\n");
-  LoRa.endPacket();
-
+  if (runEvery(1000)) {                 // repeat every 1000 millis
+  LoRa_txMode();                        // set tx mode
+  LoRa.beginPacket();                   // start packet
+  serializeJson(sensorData, LoRa);      // add payload
+  LoRa.endPacket(true);                 // finish packet and send it
+}
   // wait for respone and read message
   //deserializeJson(message_in, LoRa.);
   //bool valve_control = message_in["valve"];
   //gas_reliese_valve.write(set_valce_position(valve_control));
-
-  // wait for next iter
-  delay(500);
 }
