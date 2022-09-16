@@ -365,26 +365,11 @@
         "property": "payload",
         "action": "",
         "pretty": true,
-        "x": 210,
-        "y": 200,
+        "x": 290,
+        "y": 240,
         "wires": [
             [
                 "c8ba53482cb62e2c"
-            ]
-        ]
-    },
-    {
-        "id": "4e25857880a3f4e2",
-        "type": "serial in",
-        "z": "917fed556fb0884b",
-        "name": "COM port",
-        "serial": "01d604885f72c210",
-        "x": 60,
-        "y": 200,
-        "wires": [
-            [
-                "52ddb79c6b289978",
-                "22742616fb08d453"
             ]
         ]
     },
@@ -708,8 +693,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 210,
-        "y": 260,
+        "x": 310,
+        "y": 300,
         "wires": []
     },
     {
@@ -729,8 +714,8 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 500,
-        "y": 160,
+        "x": 420,
+        "y": 180,
         "wires": [
             [
                 "5c3b92a157a30f6b",
@@ -794,7 +779,9 @@
         "z": "917fed556fb0884b",
         "name": "link out 1",
         "mode": "link",
-        "links": [],
+        "links": [
+            "ee7dd12893df56b6"
+        ],
         "x": 635,
         "y": 40,
         "wires": []
@@ -821,8 +808,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 330,
-        "y": 200,
+        "x": 410,
+        "y": 240,
         "wires": [
             [
                 "23d4d6b620594245"
@@ -912,6 +899,21 @@
         "wires": []
     },
     {
+        "id": "47104627e87793f5",
+        "type": "serial in",
+        "z": "917fed556fb0884b",
+        "name": "",
+        "serial": "01d604885f72c210",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "52ddb79c6b289978",
+                "22742616fb08d453"
+            ]
+        ]
+    },
+    {
         "id": "4d04e1051c9d91a8",
         "type": "csv",
         "z": "5aeea8caac0c5431",
@@ -939,13 +941,13 @@
         "type": "file",
         "z": "5aeea8caac0c5431",
         "name": "",
-        "filename": "C:\\Users\\Tomasz\\OneDrive\\Home\\IPPT\\TANGO4\\Software\\Aerostat\\measures\\aerostat.csv",
+        "filename": "C:\\Users\\Tomasz\\Desktop\\measurement_file.csv",
         "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "delete",
         "encoding": "none",
-        "x": 660,
+        "x": 530,
         "y": 220,
         "wires": [
             []
@@ -1003,7 +1005,7 @@
         "type": "debug",
         "z": "5aeea8caac0c5431",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -1103,7 +1105,9 @@
         "type": "link in",
         "z": "5aeea8caac0c5431",
         "name": "link in 2",
-        "links": [],
+        "links": [
+            "8b65c59c76e5af01"
+        ],
         "x": 55,
         "y": 100,
         "wires": [
@@ -1117,27 +1121,17 @@
         "type": "file",
         "z": "5aeea8caac0c5431",
         "name": "",
-        "filename": "C:\\Users\\Tomasz\\OneDrive\\Home\\IPPT\\TANGO4\\Software\\Aerostat\\measures\\aerostat.csv",
+        "filename": "C:\\Users\\Tomasz\\Desktop\\measurement_file.csv",
         "filenameType": "str",
         "appendNewline": false,
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 920,
+        "x": 780,
         "y": 160,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "cda6c7094272cf64",
-        "type": "serial out",
-        "z": "e0c5d8f231f3d963",
-        "name": "",
-        "serial": "01d604885f72c210",
-        "x": 610,
-        "y": 200,
-        "wires": []
     },
     {
         "id": "6850acb8fc115b8b",
@@ -1151,8 +1145,8 @@
         "y": 200,
         "wires": [
             [
-                "cda6c7094272cf64",
-                "f47fb22efc3adc90"
+                "f47fb22efc3adc90",
+                "e42c6a7dbcdae905"
             ]
         ]
     },
@@ -1226,5 +1220,15 @@
                 "4945ccf937785640"
             ]
         ]
+    },
+    {
+        "id": "e42c6a7dbcdae905",
+        "type": "serial out",
+        "z": "e0c5d8f231f3d963",
+        "name": "",
+        "serial": "01d604885f72c210",
+        "x": 610,
+        "y": 200,
+        "wires": []
     }
 ]
